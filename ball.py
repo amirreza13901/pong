@@ -3,8 +3,8 @@ import random
 class ball:
     def __init__(self, surface, x, y, size, sound):
         self.ball_base = pygame.Rect(x, y, size, size)
-        self.dx = random.choice([-5,5])
-        self.dy = random.choice([-5,5])
+        self.dx = random.choice([-4,4])
+        self.dy = random.choice([-4,4])
         self.hit_bottom = False
         self.hit_top = False
         # self.player_score=0
@@ -56,10 +56,14 @@ class ball:
     def ball_reset_check(self,x,win_h):
         if self.reset:
             self.reset=False
+            if self.ball_base.x > 500:
+                self.dx = -4
+            if self.ball_base.x <500:
+                self.dx = 4   
             self.ball_base.y=random.randint(26, win_h-46)
             self.ball_base.x=x
-            self.dx = random.choice([-5,5])
-            self.dy = random.choice([-5,5])
+            self.dy = random.choice([-4,4])
+      
         
 
     # def get_player_score(self, win_width, x, y):

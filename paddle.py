@@ -8,7 +8,7 @@ class paddle:
 
     def move(self, win_width, win_height, surface):
         add_y=0
-        speed=8
+        speed=4
         bg_space_top = 28
         bg_space_bottom_with_win_height = win_height-46
 

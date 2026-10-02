@@ -8,7 +8,7 @@ class bot:
     
     def move(self, win_width, win_height, ball):
         distance = ball.ball_base.centery - self.bot_base.centery
-        add_y=distance * 0.09
+        add_y=distance * 0.06
         speed=10
         # dead_zone = 50
         bg_space_top = 28
